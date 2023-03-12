@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: normal;
+    color: #555;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f5f5f7;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .heading{
+    position: relative;
+    margin: 0 auto 3rem;
+    order: 2;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.bar-graph{
+    display: flex;
+    order: 1;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem 3rem;
+}
+
+.bar-graph > div{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.bar-graph .percent{
+    margin-top: 1rem;
+}
+
+.bar-graph .percent span{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.bar-graph .column-bar{
+    position: relative;
+    width: 4rem;
+    height: 100%;
+    background: #f0f0f0;
+    margin: auto;
+}
+
+.bar-graph .column-bar span{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #6665ee;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+
+.bar-graph .percent-30 span{
+    animation: bar_bounce_30 1s ease-in-out 0.3s forwards;
+}
+
+@keyframes bar_bounce_30{
+    100%{
+        transform: scaleY(30%);
+    }
+}
+
+.bar-graph .percent-40 span{
+    animation: bar_bounce_40 1s ease-in-out 0.3s forwards;
+}
+
+@keyframes bar_bounce_40{
+    100%{
+        transform: scaleY(40%);
+    }
+}
+
+.bar-graph .percent-80 span{
+    animation: bar_bounce_80 1s ease-in-out 0.3s forwards;
+}
+
+@keyframes bar_bounce_80{
+    100%{
+        transform: scaleY(80%);
+    }
+}
